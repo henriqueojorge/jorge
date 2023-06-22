@@ -1,0 +1,52 @@
+
+#include <stdio.h>
+
+int main() {
+  float a, b, c, x, moda, media;
+  
+  
+    printf("Digite um número inteiro e positivo:");
+          scanf("%f", & a);
+  
+     printf("Digite um número inteiro e positivo::");
+          scanf("%f", & b);
+  
+     printf("Digite um número inteiro e positivo::");
+          scanf("%f", & c);
+    // usei "x" como uma variável para deslocar os valor dos números, mas deixando fixos sua ordem ("a,b,c")
+        if(a > b){
+      x = a;
+      a = b;
+      b = x;
+     }
+        if(a > c){
+      x = a;
+      a = c;
+      c = x;
+     }
+         if(b > c){
+      x = b;
+      b = c;
+      c = x;
+     }
+     
+        printf("Números selecionados ordenados: %.0f - %.0f - %.0f", a, b, c );
+  
+        printf ("\nMediana: %.0f", b);
+     
+        media = ((a+b+c)/3);
+        printf("\nMédia: %.3f", media);
+   
+     
+            if(a == b){
+            moda = a;
+            }
+            if(a == b == c){
+            moda = a;
+            }
+            if (b == c){
+            moda = b;
+            }
+            // Caso não houver valor para a "moda", será representado o valor de zero.
+               printf("\nModa: %.0f", moda);
+        }
